@@ -5,11 +5,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-# Replace with the path to your ChromeDriver
-chrome_driver_path = '/path/to/chromedriver'
+# Set the path to the ChromeDriver inside the 'drivers/' folder
+driver_path = os.path.join(os.path.dirname(__file__), 'drivers', 'chromedriver')
 
-# Initialize WebDriver
-driver = webdriver.Chrome(service=Service(chrome_driver_path))
+# Initialize the WebDriver with the specified path
+driver = webdriver.Chrome(service=Service(driver_path))
 
 # Open the sports website (e.g., ESPN, MLB)
 driver.get('https://www.espn.com/mlb/scoreboard')
